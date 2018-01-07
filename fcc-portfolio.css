@@ -1,35 +1,122 @@
-#particle {
-    background-color: rgba(0, 0, 0, 1);
-    position: fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    z-index:0;
-    opacity: 1
-  }
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+@mixin center(){
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50% -50%);
+    left:50%;
+    top:50%;
+}
+
+body {
+  background: #614B58;
   
-  #content {
-    background: #fff;
-    margin-top: 3%;
-    margin-bottom:3%;
-    padding-bottom: 1%;
-    position: relative;
-  }
+}
+
+.navbar {
+  background: transparent;
+}
+
+#fullHead {
+  height: 100vh;
+}
+
+#nameArea > h2 {
+  position: fixed; /* or absolute */
+  top: 65%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-weight: 700;
+  color: transparent;
+  font-size:90px;
+  background: url("https://images.unsplash.com/photo-1498769768077-b89b32334e23?auto=format&fit=crop&w=750&q=80");
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: 8px;
+  font-family: 'Acme', sans-serif;
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  background: #DFD6D7;
+  padding-top: 3%;
+  margin-bottom:3%;
+  padding-bottom: 1%;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1498769768077-b89b32334e23?auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+}
+
+div.tab {
+  overflow: hidden;
+  border: 1px solid #C7A8A2;
+  background-color: #C7A8A2;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+  background-color: #614B58;
+  color: #fff;
+}
+
+div.tab button.active {
+    background-color: #614B58;
   
-  #aboutLeft {
-    text-align: center;
-    padding-top: 4%;
-  }
-  
-  #aboutRight img{
-    height: 200px;
-  }
-  
-  #about {
-    margin-top: 5%;
-  }
-  
-  #aboutBottom {
-    margin-top: 5%;
-  }
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #C7A8A2;
+    border-top: none;
+    background: rgba(199, 168, 162, .7);
+    color: #000;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#work {
+  padding-top: 3%;
+}
+
+#projectButtons {
+  background-color: #C7A8A2;
+  border: 1px solid #614B58;
+}
+
+.card {
+  background-color: #C7A8A2;
+}
+
+#contact {
+  padding-top: 4%;
+}
+
+form {
+  margin-left: 5%;
+  margin-right: 5%;
+  background: rgba(199, 168, 162, .7);
+  padding: 2%;
+}
