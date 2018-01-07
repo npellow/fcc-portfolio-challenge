@@ -7,67 +7,131 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="fcc-portfolio.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-        <div id="particle"></div>
-        
-        <div class="container rounded" id="content">
-          
-          <!-- NAV BAR -->
-          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#work">Portfolio</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-          <!-- end nav bar -->
-          
-          <!-- about section -->
-          <div class="container">
-          <div class="row" id="about">
-            <div class="col-sm" id="aboutRight">
-              <img src="https://avatars1.githubusercontent.com/u/21061478?v=4" class="img-fluid mx-auto d-block rounded-circle">
-            </div>
-            <div class="col-sm" id="aboutLeft">
-              <h2>Nichole Pellow</h2>
-              <h4>web developer</h4>
-              <h4>based in the midwest</h4>
-              <p>
-            </div>
-          </div>
-            <div id="breakPoint">
-            </div>
-            <div class="row" id="aboutBottom">
-              <div class="col-sm text-center" id="info">
-               <p> My name is Nichole, and I enjoy building responsive websites.</p><p>I hail from the south, have lived in England, and currently reside in the midwest. I am a wife and a mother, and we have a black cat named Onyxia. My technical interests include UI design, responsiveness, interactive designs, learning about emerging trends, trying out fun libraries, Bootstrap, and more.</p>
+        <div class="container-fluid" id="fullHead">
+                
+                <!-- NAV BAR -->
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #614B58;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#content">About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#work">Portfolio</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+                <!-- end nav bar -->
+                
+                <!-- name area -->
+                <div class="container-fluid text-center" id="nameArea">
+                  
+                  <h1>Nichole Pellow</h1>
+                  <h2>web devoloper</h2>
+                  
+               </div>
                 
                 
+                <!-- end name area -->
+                
               </div>
-              <div class="col-sm" id="skills">
-               
+              
+              <div class="container-fluid" id="content">
+                <!-- about section -->
+                <div class="tab">
+                <button class="tablinks" onclick="openLink(event, 'About')" id="defaultOpen">About</button>
+                <button class="tablinks" onclick="openLink(event, 'Skills')">Skills</button>
+                <button class="tablinks" onclick="openLink(event, 'Interests')">Interests</button>
               </div>
-            </div>
-          </div>
-          <!-- end about -->
-          
-          
-        </div>
+                
+                <div id="About" class="tabcontent text-center">
+                 <p> My name is Nichole, and I enjoy building responsive websites.</p><p>I hail from the south, have lived in England, and currently reside in the midwest. I am a wife and a mother, and we have a black cat named Onyxia. My technical interests include UI design, responsiveness, interactive designs, learning about emerging trends, trying out fun libraries, Bootstrap, and more.</p>
+              </div>
+                
+                <div id="Skills" class="tabcontent text-center">
+                  <h5>Current Skills</h5>
+                  <p>HTML5 • CSS3 • JavaScript<br>
+                    jQuery • Bootstrap</p>
+                </div>
+                
+                <div id="Interests" class="tabcontent text-center">
+                  <h5>Interests & Hobbies</h5>
+                  <p>Learning • Family Time • Traveling<br>
+                    Reading • Video Games • Politics • UI Design<br>
+                    Astronomy • Coding for Fun • K-Dramas</p>
+              </div>
+                
+                
+              <!-- end about -->
+              
+              <!-- portfolio section -->
+              <div class="container-fluid" id="work">
+                <div class="card-deck">
+                <div class="card">
+                  <img src="http://c0.nrostatic.com/sites/default/files/styles/original_image_with_cropping/public/uploaded/snl-susan-b-anthony-early-feminists-opposed-abortion.jpg?itok=czdOEiop" class="card-img-top img-fluid mx-auto d-block rounded" alt="Susan B. Anthony">
+                  <div class="card-body">
+                    <h5 class="card-title">Tribute: Susan B. Anthony</h5>
+                    <p class="card-text">A project page made for a freeCodeCamp challenge about Susan B. Anthony. Skills used include Bootstrap 4.</p>
+                    <p>
+                      <a href="https://codepen.io/npellow/full/LeZxvj/" target="_new"><button type="button" class="btn" id="projectButtons">View</button></a>
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top img-fluid mx-auto d-block rounded" src="http://cdn.akamai.steamstatic.com/steam/apps/39680/ss_4d6e244f31aff944049c35ccb3120bf3a28e5cbe.1920x1080.jpg?t=1472039814" alt="The Guild II: Renaissance">
+                  <div class="card-body">
+                    <h5 class="card-title">The Guild II: Renaissance</h5>
+                    <p class="card-text">A single page with basic information about a video game called The Guild II: Renaissance. Skills used include Bootstrap 4.</p>
+                    <p><a href="https://codepen.io/npellow/full/xXmvja/" target="_new"><button type="button" class="btn" id="projectButtons">View</button></a></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top img-fluid mx-auto d-block rounded" src="https://s-media-cache-ak0.pinimg.com/originals/41/48/8e/41488ed045ed2d5e33c8039fafd2660c.jpg" alt="Viking Quotes Generator">
+                  <div class="card-body">
+                    <h5 class="card-title">Viking Quotes Generator</h5>
+                    <p class="card-text">A simple quote generator of from the Norse Sagas. Skills used include Bootstrap 3 and JavaScript.</p>
+                    <p><a href="https://codepen.io/npellow/full/dNyYqJ/" target="_new"><button type="button" class="btn" id="projectButtons">View</button></a></p>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+              <!-- contact section -->
+              <div class="container-fluid" id="contact">
+                <form action="/action_page.php" method="post">
+                  <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Tell me your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email so I can get back to you">
+                </div>
+                <div class="form-group">
+                
+                </div>
+                  <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="What's on your mind?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              </div>
+              
+              </div>
+              </div>
 
 <script src="fcc-portfolio.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>
