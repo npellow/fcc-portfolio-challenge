@@ -1,113 +1,40 @@
-var options = {
-    "particles": {
-      "number": {
-        "value": 246,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#fff"
-      },
-      "shape": {
-        "type": "star",
-        "stroke": {
-          "width": 0,
-          "color": "#000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 1,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 3,
-          "opacity_min": 0,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 4,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 6,
-          "size_min": 1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 600
-        }
+$(document).ready(function(){
+    var mouseX, mouseY;
+    var ww = $( window ).width();
+    var wh = $( window ).height();
+    var traX, traY;
+    $(document).mousemove(function(e){
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+      traX = ((4 * mouseX) / 580) + 40;
+      traY = ((4 * mouseY) / 580) + 50;
+      console.log(traX);
+      $("h1").css({"background-position": traX + "%" + traY + "%"});
+    });
+  });
+  
+  
+  // about tab content section
+  
+  function openLink(evt, aboutSection) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+  
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
       }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": false,
-          "mode": "bubble"
-        },
-        "onclick": {
-          "enable": false,
-          "mode": "bubble"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 250,
-          "size": 0,
-          "duration": 2,
-          "opacity": 0,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 400,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
+  
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-    },
-    "retina_detect": true
+  
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(aboutSection).style.display = "block";
+      evt.currentTarget.className += " active";
   }
   
-  particlesJS("particle", options);
-  
+  document.getElementById("defaultOpen").click();
